@@ -30,4 +30,27 @@ describe('test for Calculator', ()=>{
         });
 
     });
+
+    describe('Test for divide', ()=>{
+
+        it('divide for a number', ()=>{
+            //Arrange
+            let calculator= new Calculator();
+            //Act & Assert
+            expect (calculator.divide(6, 3)).toEqual(2);
+            expect (calculator.divide(5, 2)).toEqual(2.5);
+
+        });
+
+        it('divide for zero', ()=>{
+            //Arrange
+            let calculator= new Calculator();
+            //Act & Assert
+            expect (calculator.divide(6, 0)).toBeNull;
+            expect (calculator.divide(5, 0)).toBeNull;
+
+        });
+       
+
+    });
 });
